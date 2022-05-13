@@ -29,6 +29,7 @@ class PokemonActivity : AppCompatActivity() {
         if (pokemonJson != null) {
             val pokemon = Pokemon.fromJson(pokemonJson)
             binding.tvPokemonNombre.text = pokemon.nameCapitalized()
+            binding.horizontalProgressbar.max = pokemon.vidaMaxima
         } else {
             Toast.makeText(this, "No se ha recibido ningún Pokémon", Toast.LENGTH_LONG).show()
             finish()
