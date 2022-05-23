@@ -9,8 +9,8 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@color/cardview_dark_background"
+        android:layout_height="150dp"
+        android:background="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
@@ -29,6 +30,8 @@
             android:id="@+id/ivPokemon"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
             tools:src="@tools:sample/avatars"
             android:contentDescription="@string/pokemon_picture" />
 
@@ -40,35 +43,39 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvPokemon"
+                android:id="@+id/tvPokemonNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 tools:text="Nombre Pokemon" />
+
             <TextView
-                android:id="@+id/tvPokemon"
+                android:id="@+id/tvPokemonAltura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight=""
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp"
-                tools:text="Nombre Pokemon" />
+                tools:text="Altura Pokemon" />
             <TextView
-                android:id="@+id/tvPokemon"
+                android:id="@+id/tvPokemonPeso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp"
-                tools:text="Nombre Pokemon" />
+                tools:text="Peso Pokemon" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_weight="0"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/iv_tipo1"
@@ -85,6 +92,30 @@
             </LinearLayout>
 
 
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="@color/green" />
+
+                <TextView
+                    android:id="@+id/psVida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:text="200/200" />
+
+
+
+
+
         </LinearLayout>
 
     </LinearLayout>
@@ -92,15 +123,17 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/cardview_dark_background"
+        android:layout_height="150dp"
+        android:background="@color/red"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
     </LinearLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
